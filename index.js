@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const { fetchAccountData, fetchBalanceData } = require("./utils/AxiosRequests");
+const {
+  fetchAccountData,
+  fetchBalanceData,
+  fetchTransactionData,
+} = require("./utils/AxiosRequests");
 
 const userRoutes = require("./routes/account-routes");
 
@@ -10,11 +14,13 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send(fetchAccountData());
+  fetchAccountData(req, res);
 });
 app.get("/balance", (req, res) => {
-  const balanceObj = fetchBalanceData();
-  res.send(balanceObj);
+  fetchBalanceData(req, res);
+});
+app.get("/transactions", (req, res) => {
+  fetchTransactionData(req, res);
 });
 
 app.listen(PORT, () => {
