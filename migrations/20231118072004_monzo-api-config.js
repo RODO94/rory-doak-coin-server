@@ -9,30 +9,29 @@ exports.up = function (knex) {
       table.string("first_name").notNullable();
       table.string("last_name").notNullable();
       table.string("email").notNullable();
-      table.string("known_as");
-      table.string("monzo_user_id");
-      table.string("monzo_token");
+      table.string("known_as").notNullable();
+      table.string("monzo_user_id").notNullable();
+      table.string("monzo_token").notNullable();
     })
     .createTable("accounts", (table) => {
       table.string("id").primary();
       table.string("bank_name").notNullable();
       table.integer("account_balance").notNullable();
-      table.integer("savings_balance");
-      table.integer("available_balance");
+      table.integer("savings_balance").notNullable();
+      table.integer("available_balance").notNullable();
       table.boolean("is_savings").defaultTo(false);
+      table.date("created_on");
+      table.string("type").notNullable();
+      table.string("currency").notNullable();
+      table.string("country_code").notNullable();
+      table.boolean("is_closed").defaultTo(false);
+      table.integer("spend_today").notNullable();
       table
         .string("user_id")
         .notNullable()
-        .unsigned()
         .references("users.id")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
-      table.date("created_on").notNullable();
-      table.string("type").notNullable();
-      table.string("currency"), notNullable();
-      table.string("country_code").notNullable();
-      table.boolean("is_closed").defaultTo(false);
-      table.integer("spend_today");
       table.foreign("user_id");
     })
     .createTable("connections", (table) => {
@@ -40,14 +39,12 @@ exports.up = function (knex) {
       table
         .string("user_id")
         .notNullable()
-        .unsigned()
         .references("users.id")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       table
         .string("connect_id")
         .notNullable()
-        .unsigned()
         .references("users.id")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
@@ -61,20 +58,18 @@ exports.up = function (knex) {
       table
         .string("user_id")
         .notNullable()
-        .unsigned()
         .references("users.id")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       table
         .string("account_id")
         .notNullable()
-        .unsigned()
         .references("accounts.id")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       table.string("monzo_account_id").notNullable();
       table.string("monzo_transaction_id").notNullable();
-      table.integer("savings");
+      table.integer("savings").notNullable();
       table.date("created").notNullable();
 
       table.foreign("user_id");
