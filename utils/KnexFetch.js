@@ -33,9 +33,57 @@ const fetchUsersConnections = async (id) => {
   }
 };
 
+const fetchDailySpend = async (id) => {
+  try {
+    const dailySpend = await knex("accounts")
+      .where({ user_id: id })
+      .select("spend_today");
+    return dailySpend;
+  } catch (error) {}
+};
+
+const fetchConnectionBalances = async (id) => {
+  try {
+    const connectionsBalancesObj = await knex("accounts")
+      .join("connections", "accounts.user_id", "=", "connections.connect_id")
+      .select(
+        "accounts.account_balance",
+        "accounts.savings_balance",
+        "accounts.available_balance"
+      )
+      .where("connections.user_id", id);
+    return connectionsBalancesObj;
+  } catch (error) {}
+};
+
+// Each connection has a user_id and that user has
+// access to their connections balance
+// So I need to see for the connections attached to the user_id
+// give me their balances
+
+const fetchUsersBalance = async (id) => {
+  try {
+    const usersBalance = await knex("accounts")
+      .where({ user_id: id })
+      .select("account_balance", "savings_balance", "available_balance");
+    return usersBalance;
+  } catch (error) {}
+};
+
+const fetchUsersAccounts = async (id) => {
+  try {
+    const usersAccounts = await knex("accounts").where({ user_id: id });
+    return usersAccounts;
+  } catch (error) {}
+};
+
 module.exports = {
   fetchUser,
   fetchConnections,
   fetchAccounts,
   fetchUsersConnections,
+  fetchDailySpend,
+  fetchConnectionBalances,
+  fetchUsersBalance,
+  fetchUsersAccounts,
 };
