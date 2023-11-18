@@ -1,7 +1,7 @@
 const { default: axios } = require("axios");
 
 const token =
-  "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlYiI6ImR0VlFJNm9wRW5KY2x2WHhmaERvIiwianRpIjoiYWNjdG9rXzAwMDBBYnJrT0VXaXc4amoxVnpDMGgiLCJ0eXAiOiJhdCIsInYiOiI2In0.QcVbity3Y9V1azKCp-ap-uPIRpmmM4nKdjTtCZqha9bOb0wrdDdha9-XZFWK1zyflBIJzc5EDTnHfO9sswOz7w";
+  "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlYiI6Iitvdm1sSEVlZC9UT1dMM05XcEpsIiwianRpIjoiYWNjdG9rXzAwMDBBYnZJZXNxd2toVnk5QzM4SzIiLCJ0eXAiOiJhdCIsInYiOiI2In0.mmx4VX9VMTuO5kPLNaTnHrPtSCyw74En1H-7VuKJ6_iCaRy7VjAtUrS9zjLSLeCu7ns2tqN1IZ_rrLobyrmu4Q";
 const mainAccountId = "acc_0000A7opetunLsyIaJFg6j";
 const fetchAccountData = async (req, res) => {
   const { data } = await axios.get("https://api.monzo.com/accounts", {
@@ -13,11 +13,13 @@ const fetchAccountData = async (req, res) => {
     .map((account) => {
       return (account = {
         account: account.id,
+        bank_name: "Monzo",
         created: account.created,
         type: account.type,
         currency: account.currency,
         country_code: account.country_code,
         monzo_user_id: account.owners.user_id,
+        is_closed: account.closed,
       });
     });
 
@@ -53,10 +55,8 @@ const fetchTransactionData = async (req, res) => {
       }
     );
 
-    transactionArray = [];
-
-    data.transactions.map((transaction) => {
-      let newObj = {
+    const transactionArray = data.transactions.map((transaction) => {
+      return {
         id: transaction.id,
         account_id: transaction.account_id,
         user_id: transaction.metadata.user_id,
@@ -65,16 +65,15 @@ const fetchTransactionData = async (req, res) => {
         local_amount: transaction.local_amount,
         local_currency: transaction.local_currency,
         created: transaction.created,
+        settled: transaction.settled,
       };
-
-      transactionArray.push(newObj);
     });
 
     res.send(transactionArray);
   } catch (error) {
     console.error(error);
   }
-  return transactionArray;
+  return ["no transactions found"];
 };
 
 module.exports = { fetchAccountData, fetchBalanceData, fetchTransactionData };
