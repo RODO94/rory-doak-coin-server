@@ -3,10 +3,10 @@ const router = express.Router();
 require("dotenv").config();
 const knex = require("knex")(require("../knexfile"));
 
-router.route("/accounts").get();
+router.route("/user");
 
-router.route("/accounts/daily").get();
+router.route("/user/:accountId");
 
-router.route("/accounts/:userId");
+router.route("/user/connections");
 
-router.route("/accounts/daily/:userId").get();
+router.route("/user/connections/:userId");
