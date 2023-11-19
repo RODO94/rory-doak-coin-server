@@ -8,7 +8,7 @@
     "start": "node --watch index.js",
     "migrate": "knex migrate:latest",
     "rollback": " knex migrate:rollback",
-    "seed": "knex seed:run",
+    "seed": "knex seed:run --specific=transactions.js",
     "knex": "knex"
   },
   "author": "",
@@ -17,6 +17,7 @@
     "axios": "^1.6.1",
     "cors": "^2.8.5",
     "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "knex": "^3.0.1",
