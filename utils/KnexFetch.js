@@ -49,7 +49,13 @@ const fetchConnectionBalances = async (id) => {
       .select(
         "accounts.account_balance",
         "accounts.savings_balance",
-        "accounts.available_balance"
+        "accounts.available_balance",
+        "user_first_name",
+        "user_last_name",
+        "user_known_as",
+        "connect_first_name",
+        "connect_last_name",
+        "connect_known_as"
       )
       .where("connections.user_id", id);
     return connectionsBalancesObj;
