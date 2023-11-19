@@ -62,11 +62,6 @@ const fetchConnectionBalances = async (id) => {
   } catch (error) {}
 };
 
-// Each connection has a user_id and that user has
-// access to their connections balance
-// So I need to see for the connections attached to the user_id
-// give me their balances
-
 const fetchUsersBalance = async (id) => {
   try {
     const usersBalance = await knex("accounts")
@@ -83,6 +78,25 @@ const fetchUsersAccounts = async (id) => {
   } catch (error) {}
 };
 
+const fetchWeeklySpend = async () => {
+  try {
+    const usersWeeklySpend = await knex("transactions")
+      .join("users", "transactions.user_id", "=", "users.id")
+      .select(
+        "transactions.amount",
+        "transactions.user_id",
+        "transactions.account_id",
+        "transactions.category",
+        "transactions.created",
+        "users.first_name",
+        "users.last_name",
+        "users.known_as"
+      )
+      .whereBetween("transactions.created", ["2023-10-16", "2023-11-19"]);
+    return usersWeeklySpend;
+  } catch (error) {}
+};
+
 module.exports = {
   fetchUser,
   fetchConnections,
@@ -92,4 +106,5 @@ module.exports = {
   fetchConnectionBalances,
   fetchUsersBalance,
   fetchUsersAccounts,
+  fetchWeeklySpend,
 };
