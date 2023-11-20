@@ -49,7 +49,6 @@ router.route("/").get(async (req, res) => {
 
     // If you can find the name and the week you are looking for is there
     if (foundIndex !== -1 && weekIndex !== undefined && weekIndex !== -1) {
-      // we need to change the amount on the amount: key
       let newAmount = 0;
       newAmount =
         newArray[foundIndex].data[weekIndex].amount + transaction.amount;
@@ -75,19 +74,3 @@ router.route("/").get(async (req, res) => {
 });
 
 module.exports = router;
-
-// [
-//   {
-//     name: "Rory",
-//     data: [
-//       {
-//         week: 47,
-//         amount: 2344,
-//       },
-//       {
-//         week: 48,
-//         amount: 2344,
-//       },
-//     ],
-//   },
-// ];
