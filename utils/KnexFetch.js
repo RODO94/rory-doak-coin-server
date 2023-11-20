@@ -33,7 +33,7 @@ const fetchUsersConnections = async (id) => {
   }
 };
 
-const fetchDailySpend = async (id) => {
+const fetchUserDailySpend = async (id) => {
   try {
     const dailySpend = await knex("accounts")
       .where({ user_id: id })
@@ -97,14 +97,30 @@ const fetchWeeklySpend = async () => {
   } catch (error) {}
 };
 
+// Knex CRUD operations - route - callback function gets
+// replaced with the Fetch functions
+
+const fetchDailySpend = async () => {
+  try {
+    const dailySpend = await knex("accounts")
+      .join("users", "accounts.user_id", "=", "users.id")
+      .select("accounts.spend_today", "users.first_name");
+    return dailySpend;
+  } catch (error) {
+    resizeBy.status(400).send(error);
+    return console.error(error);
+  }
+};
+
 module.exports = {
   fetchUser,
   fetchConnections,
   fetchAccounts,
   fetchUsersConnections,
-  fetchDailySpend,
+  fetchUserDailySpend,
   fetchConnectionBalances,
   fetchUsersBalance,
   fetchUsersAccounts,
   fetchWeeklySpend,
+  fetchDailySpend,
 };

@@ -1,6 +1,6 @@
 const express = require("express");
 const {
-  fetchDailySpend,
+  fetchUserDailySpend,
   fetchConnectionBalances,
   fetchUsersBalance,
   fetchUsersAccounts,
@@ -8,11 +8,10 @@ const {
 const router = express.Router();
 
 require("dotenv").config();
-const knex = require("knex")(require("../knexfile"));
 
 // A Users Daily Spend
 router.route("/daily/:userId").get(async (req, res) => {
-  const dailySpend = await fetchDailySpend(req.params.userId);
+  const dailySpend = await fetchUserDailySpend(req.params.userId);
   res.send(dailySpend);
 });
 

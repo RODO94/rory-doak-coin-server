@@ -1,5 +1,5 @@
 const express = require("express");
-const { fetchWeeklySpend } = require("../utils/KnexFetch");
+const { fetchWeeklySpend, fetchDailySpend } = require("../utils/KnexFetch");
 const dayjs = require("dayjs");
 const weekOfYear = require("dayjs/plugin/weekOfYear");
 dayjs.extend(weekOfYear);
@@ -7,7 +7,7 @@ dayjs.extend(weekOfYear);
 const router = express.Router();
 require("dotenv").config();
 
-router.route("/").get(async (req, res) => {
+router.route("/weekly").get(async (req, res) => {
   console.log(dayjs("2021-11-18").week());
   const transactionArray = await fetchWeeklySpend();
 
@@ -71,6 +71,11 @@ router.route("/").get(async (req, res) => {
   newArray[0].data = roryUnitChange;
   res.status(200).send(transactionsByWeekArray);
   return newArray;
+});
+
+router.route("/daily").get(async (req, res) => {
+  const dailySpend = await fetchDailySpend();
+  res.send(dailySpend);
 });
 
 module.exports = router;
