@@ -4,7 +4,7 @@ const {
   fetchConnectionBalances,
   fetchUsersBalance,
   fetchUsersAccounts,
-} = require("../utils/KnexFetch");
+} = require("../controllers/accounts-controller");
 const router = express.Router();
 
 require("dotenv").config();

@@ -1,126 +1,74 @@
 const knex = require("knex")(require("../knexfile"));
+const dayjs = require("dayjs");
+const weekOfYear = require("dayjs/plugin/weekOfYear");
 
-const fetchUser = async (id) => {
-  try {
-    userObj = await knex("users").where({ id: id }).first();
-    return userObj;
-  } catch (error) {
-    console.error(error);
-  }
+dayjs.extend(weekOfYear);
+
+const weekArrayRestructure = (array) => {
+  const transactionArray = array;
+  const transactionsByWeekArray = transactionArray.map(
+    (transaction) =>
+      (transaction = {
+        ...transaction,
+        week: dayjs(transaction.created).week(),
+      })
+  );
+  let newArray = [];
+  transactionsByWeekArray.map((transaction) => {
+    let foundIndex = newArray.findIndex(
+      (obj) => obj.id === transaction.first_name
+    );
+    if (
+      transaction.category === "transfers" ||
+      transaction.category === "income" ||
+      transaction.category === "savings"
+    ) {
+      return;
+    }
+    if (foundIndex === -1) {
+      // If you can't find the name
+      newArray = [
+        ...newArray,
+        {
+          id: transaction.first_name,
+          data: [{ x: transaction.week, y: transaction.amount }],
+        },
+      ];
+      return;
+    }
+    let weekIndex = newArray[foundIndex].data.findIndex(
+      (obj) => obj.x === transaction.week
+    );
+
+    // If you can find the name and the week you are looking for is there
+    if (foundIndex !== -1 && weekIndex !== undefined && weekIndex !== -1) {
+      let newAmount = 0;
+      newAmount = newArray[foundIndex].data[weekIndex].y + transaction.amount;
+      newArray[foundIndex].data[weekIndex].y = newAmount;
+      return;
+    }
+    // If you can find the name, but the week you are looking for is not there
+    if (foundIndex !== -1 && weekIndex === -1) {
+      newArray[foundIndex].data = [
+        ...newArray[foundIndex].data,
+        { x: transaction.week, y: transaction.amount },
+      ];
+      return;
+    }
+  });
+  const roryUnitChange = newArray[0].data.map((week) => {
+    return (newObj = { ...week, y: week.y / 100 });
+  });
+  console.log(roryUnitChange);
+  newArray[0].data = roryUnitChange;
+  const sortedArray = newArray.map((person) => {
+    return person.data.sort((a, b) => {
+      return a.x - b.x;
+    });
+  });
+  console.log(sortedArray);
+  return newArray;
 };
-
-const fetchAccounts = async (id) => {
-  try {
-    accountObj = await knex("accounts").where({ id: id });
-  } catch (error) {}
-};
-
-const fetchConnections = async () => {
-  try {
-    const connectionsObj = await knex("connections");
-    return connectionsObj;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const fetchUsersConnections = async (id) => {
-  try {
-    connectionsObj = await knex("connections").where({ user_id: id });
-    return connectionsObj;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const fetchUserDailySpend = async (id) => {
-  try {
-    const dailySpend = await knex("accounts")
-      .where({ user_id: id })
-      .select("spend_today");
-    return dailySpend;
-  } catch (error) {}
-};
-
-const fetchConnectionBalances = async (id) => {
-  try {
-    const connectionsBalancesObj = await knex("accounts")
-      .join("connections", "accounts.user_id", "=", "connections.connect_id")
-      .select(
-        "accounts.account_balance",
-        "accounts.savings_balance",
-        "accounts.available_balance",
-        "user_first_name",
-        "user_last_name",
-        "user_known_as",
-        "connect_first_name",
-        "connect_last_name",
-        "connect_known_as"
-      )
-      .where("connections.user_id", id);
-    return connectionsBalancesObj;
-  } catch (error) {}
-};
-
-const fetchUsersBalance = async (id) => {
-  try {
-    const usersBalance = await knex("accounts")
-      .where({ user_id: id })
-      .select("account_balance", "savings_balance", "available_balance");
-    return usersBalance;
-  } catch (error) {}
-};
-
-const fetchUsersAccounts = async (id) => {
-  try {
-    const usersAccounts = await knex("accounts").where({ user_id: id });
-    return usersAccounts;
-  } catch (error) {}
-};
-
-const fetchWeeklySpend = async () => {
-  try {
-    const usersWeeklySpend = await knex("transactions")
-      .join("users", "transactions.user_id", "=", "users.id")
-      .select(
-        "transactions.amount",
-        "transactions.user_id",
-        "transactions.account_id",
-        "transactions.category",
-        "transactions.created",
-        "users.first_name",
-        "users.last_name",
-        "users.known_as"
-      )
-      .whereBetween("transactions.created", ["2023-10-16", "2023-11-19"]);
-    return usersWeeklySpend;
-  } catch (error) {}
-};
-
+module.exports = { weekArrayRestructure };
 // Knex CRUD operations - route - callback function gets
 // replaced with the Fetch functions
-
-const fetchDailySpend = async () => {
-  try {
-    const dailySpend = await knex("accounts")
-      .join("users", "accounts.user_id", "=", "users.id")
-      .select("accounts.spend_today", "users.first_name");
-    return dailySpend;
-  } catch (error) {
-    resizeBy.status(400).send(error);
-    return console.error(error);
-  }
-};
-
-module.exports = {
-  fetchUser,
-  fetchConnections,
-  fetchAccounts,
-  fetchUsersConnections,
-  fetchUserDailySpend,
-  fetchConnectionBalances,
-  fetchUsersBalance,
-  fetchUsersAccounts,
-  fetchWeeklySpend,
-  fetchDailySpend,
-};

@@ -6,7 +6,7 @@ const {
   fetchUser,
   fetchConnections,
   fetchUsersConnections,
-} = require("../utils/KnexFetch");
+} = require("../controllers/users-controller");
 
 router.route("/connections").get(async (req, res) => {
   const connectionsObj = await fetchConnections();
