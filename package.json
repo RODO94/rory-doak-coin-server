@@ -8,7 +8,7 @@
     "start": "node --watch index.js",
     "migrate": "knex migrate:latest",
     "rollback": " knex migrate:rollback",
-    "seed": "knex seed",
+    "seed": "knex seed:run --specific=05-threads.js",
     "knex": "knex"
   },
   "author": "",

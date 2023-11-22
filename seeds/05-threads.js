@@ -9,7 +9,7 @@ exports.seed = async function (knex) {
     {
       id: 1,
       thread_id: "thread_A9dsCSidKTAItUqWPa0eqZQ4",
-      user_id: "57581dd2-96b8-4402-912b-c669c16f21",
+      user_id: "57581dd2-96b8-4402-912b-c669c16f21a2",
     },
   ]);
 };

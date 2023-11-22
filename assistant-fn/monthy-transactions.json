@@ -1,0 +1,1282 @@
+[
+  {
+    "amount": -400,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-05T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1599,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-04T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -700,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-17T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -500,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "bills",
+    "created": "2023-11-16T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -250,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-17T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -180,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-14T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 225,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -300,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-12T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -300,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-10T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -900,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "shopping",
+    "created": "2023-11-05T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -250,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-18T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -15,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-16T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1200,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-10T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -5,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1507,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -525,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-16T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -230,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-17T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -2715,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-08T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -440,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-05T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -450,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-16T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -2,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "general",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -5,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-14T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 820,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "transport",
+    "created": "2023-11-13T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -425,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -560,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-11T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -200,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-16T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -100,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-02T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -995,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "transport",
+    "created": "2023-11-13T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1000,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "general",
+    "created": "2023-11-09T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1010,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-05T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -83552,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "transfers",
+    "created": "2023-11-20T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -325,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -920,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-04T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -719,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -200,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-10T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -375,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-15T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -680,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-08T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1447,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-06T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1925,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-09T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -350,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-16T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -150,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-02T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -5,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-16T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -200,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-12T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 32500,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "general",
+    "created": "2023-11-06T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -770,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-03T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -75,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-11T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1497,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-17T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -480,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-03T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -100,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -4698,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-13T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -10,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-10T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -325,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-12T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 83500,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-15T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -425,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -930,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-15T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -700,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "shopping",
+    "created": "2023-11-05T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -800,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-04T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -220,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -499,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "general",
+    "created": "2023-11-05T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -350,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-14T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -299,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-15T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 30000,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "transfers",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -250,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -348,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-03T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 723,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -360,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-13T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -264,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-15T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -3151,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-13T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -315,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-02T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -5,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-03T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -375,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-08T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -660,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-17T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1120,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -400,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-03T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1235,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-13T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -260,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-02T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -200,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-04T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -300,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-02T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -228,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-02T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -405,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-15T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 560,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -760,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-03T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -993,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-04T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 61,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "income",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1080,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "general",
+    "created": "2023-11-05T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -100,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -950,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-04T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -250,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-11T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -2400,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-08T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -50,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-11T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -200,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-02T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -719,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-16T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -799,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-12T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1999,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-08T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 6500,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "general",
+    "created": "2023-11-08T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -990,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-12T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -100,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-04T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -240,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-05T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -25,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-13T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -400,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-06T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -999,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-17T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -450,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-08T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1700,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "general",
+    "created": "2023-11-11T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -950,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "entertainment",
+    "created": "2023-11-12T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -250,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-03T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -245,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-13T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -750,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-06T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -360,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -35,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-03T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -300,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-04T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1000,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "bills",
+    "created": "2023-11-06T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -300,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-04T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -175,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "transport",
+    "created": "2023-11-06T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -535,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-08T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1785,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "shopping",
+    "created": "2023-11-11T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -260,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-05T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -400,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-12T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1015,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-02T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -300,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-13T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 375,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "eating_out",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -5,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-11T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -1737,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-03T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 4,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "income",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 507,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 753,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-01T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": 496,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "groceries",
+    "created": "2023-11-07T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -555,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "transport",
+    "created": "2023-11-06T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  },
+  {
+    "amount": -250,
+    "user_id": "57581dd2-96b8-4402-912b-c669c16f21a2",
+    "account_id": "b41b05c0-8911-4d3c-a4a4-0732acdb33e7",
+    "category": "savings",
+    "created": "2023-11-15T00:00:00.000Z",
+    "first_name": "Rory",
+    "last_name": "Doak",
+    "known_as": "Rory"
+  }
+]

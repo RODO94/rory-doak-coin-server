@@ -9,7 +9,6 @@ exports.up = function (knex) {
     table
       .string("user_id")
       .notNullable()
-      .unsigned()
       .references("users.id")
       .onUpdate("CASCADE")
       .onDelete("CASCADE");
