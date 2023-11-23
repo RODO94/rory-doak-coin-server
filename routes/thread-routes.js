@@ -9,6 +9,9 @@ require("dotenv").config();
 // Create a thread
 router.route("/create").post(threadController.createThread);
 
+// Create an Assistant
+
+router.route("/assistant").post(threadController.createAssistant);
 //Add message to thread & Retrieve Messages from a thread
 router
   .route("/:threadId/message")

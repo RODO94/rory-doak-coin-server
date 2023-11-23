@@ -1,4 +1,5 @@
 const knex = require("knex")(require("../knexfile"));
+const dayjs = require("dayjs");
 const { weekArrayRestructure } = require("../utils/KnexFetch");
 
 const fetchWeeklySpend = async (req, res) => {
@@ -53,7 +54,8 @@ const fetchMonthlyTransactions = async (req, res) => {
       .select(
         "transactions.amount",
         "transactions.category",
-        "transactions.created"
+        "transactions.created",
+        "transactions.user_id"
       )
       .where("transactions.created", ">", "2023-10-31")
       .andWhere("transactions.user_id", "=", req.params.userId);
@@ -71,12 +73,19 @@ const fetchYearlyTransactions = async (req, res) => {
       .select(
         "transactions.amount",
         "transactions.category",
-        "transactions.created"
+        "transactions.created",
+        "transactions.user_id"
       )
       .where("transactions.created", ">", "2022-12-31")
       .andWhere("transactions.user_id", "=", req.params.userId);
-
-    res.send(yearlyTransactions);
+    const yearlyTransactionsMapped = yearlyTransactions.map((transaction) => {
+      return {
+        ...transaction,
+        month: dayjs(transaction.created).format("MMMM"),
+        week: dayjs(transaction.created).week(),
+      };
+    });
+    res.send(yearlyTransactionsMapped);
   } catch (error) {
     console.log(error);
     res.status(400).send(error.message);
@@ -89,7 +98,8 @@ const fetchWeeklyTransactions = async (req, res) => {
       .select(
         "transactions.amount",
         "transactions.category",
-        "transactions.created"
+        "transactions.created",
+        "transactions.user_id"
       )
       .where("transactions.created", ">", "2023-11-12")
       .andWhere("transactions.user_id", "=", req.params.userId);
