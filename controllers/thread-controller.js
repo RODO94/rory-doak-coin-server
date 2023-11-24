@@ -7,6 +7,7 @@ const crypto = require("crypto");
 const fs = require("fs");
 const { structureMessageList } = require("../utils/ArrayMethods");
 const { createNewFileURL } = require("../utils/FileTransform");
+const { default: axios } = require("axios");
 
 require("dotenv").config();
 
@@ -90,6 +91,7 @@ const runStatus = async (req, res) => {
       req.params.threadId,
       req.params.runId
     );
+    console.log(runStatus.status);
     res.send(runStatus);
   } catch (error) {
     console.error(error);
@@ -107,10 +109,9 @@ const getResponse = async (req, res) => {
       (response) => response.type === "image_file"
     );
 
-    const fileObject = await createNewFileURL(imageArray[0].file_id);
-    const fileObject2 = await openai.files.retrieve(imageArray[0].file_id);
-    console.log(fileObject);
-    console.log(fileObject.url);
+    // const fileObject = await createNewFileURL(imageArray[0].file_id);
+    // const fileObject2 = await openai.files.retrieve(imageArray[0].file_id);
+
     res.send(responseArray);
   } catch (error) {
     console.error(error);
@@ -120,10 +121,13 @@ const getResponse = async (req, res) => {
 
 const createFileLink = async (req, res) => {
   try {
-    console.log("starting");
-    console.log(req.body.file_id);
-    const fileBlob = await openai.files.content(req.body.file_id);
-    res.send(fileBlob);
+    const fileBlob = await openai.files.content(req.params.file_id);
+
+    const response = await axios.get(fileBlob.url, {
+      headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
+      responseType: "stream",
+    });
+    response.data.pipe(res);
   } catch (error) {
     console.error(error);
     res.status(400).send(error.message);

@@ -25,6 +25,6 @@ router.route("/:threadId/:runId").get(threadController.runStatus);
 // Retrieve all threads for a user
 router.route("/:userId").get(threadController.getThreads);
 
-router.route("/:threadId/file").get(threadController.createFileLink);
+router.route("/:threadId/file/:file_id").get(threadController.createFileLink);
 
 module.exports = router;

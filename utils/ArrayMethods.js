@@ -85,38 +85,42 @@ const structureMessageList = (messageList) => {
     role: response.role,
     created_at: response.created_at,
     content: response.content[0].text.value,
+    type: response.content[0].type,
   }));
 
-  const separatedFilteredImageArray = filteredImageArray.flatMap((response) => [
-    {
-      id: response.id,
-      role: response.role,
-      created_at: response.created_at,
-      type: response.content[0].type,
-      file_id: response.content[0].image_file.file_id,
-    },
-    {
-      id: response.id,
-      role: response.role,
-      created_at: response.created_at,
-      type: response.content[1].type,
-      content: response.content[1].text.value,
-    },
-  ]);
-  const separateTextArray = separatedFilteredImageArray.filter(
-    (response) => response.type === "text"
-  );
-
-  const separateImageArray = separatedFilteredImageArray.filter(
-    (response) => response.type === "image_file"
-  );
-
-  const restructuredMessageArray = [
-    ...structuredMessageArray,
-    separateTextArray,
-  ].flat();
-
-  const responseArray = [...restructuredMessageArray, ...separateImageArray];
+  if (filteredImageArray.length > 0) {
+    const separatedFilteredImageArray = filteredImageArray.flatMap(
+      (response) => [
+        {
+          id: response.id,
+          role: response.role,
+          created_at: response.created_at,
+          type: response.content[0].type,
+          file_id: response.content[0].image_file.file_id,
+        },
+        {
+          id: response.id,
+          role: response.role,
+          created_at: response.created_at,
+          type: response.content[1].type,
+          content: response.content[1].text.value,
+        },
+      ]
+    );
+    const separateImageArray = separatedFilteredImageArray.filter(
+      (response) => response.type === "image_file"
+    );
+    const separateTextArray = separatedFilteredImageArray.filter(
+      (response) => response.type === "text"
+    );
+    const restructuredMessageArray = [
+      ...structuredMessageArray,
+      separateTextArray,
+    ].flat();
+    const responseArray = [...restructuredMessageArray, ...separateImageArray];
+    return responseArray;
+  }
+  const responseArray = structuredMessageArray;
   return responseArray;
 };
 module.exports = { weekArrayRestructure, structureMessageList };
