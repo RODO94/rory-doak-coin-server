@@ -19,12 +19,12 @@ router
   .post(threadController.addMessage);
 
 // Run thread
-router
-  .route("/:threadId/run")
-  .post(threadController.runThread)
-  .get(threadController.runStatus);
+router.route("/:threadId/run").post(threadController.runThread);
 
+router.route("/:threadId/:runId").get(threadController.runStatus);
 // Retrieve all threads for a user
-router.route("/:userId").get();
+router.route("/:userId").get(threadController.getThreads);
+
+router.route("/:threadId/file").get(threadController.createFileLink);
 
 module.exports = router;

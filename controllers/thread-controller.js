@@ -5,8 +5,24 @@ const userId = "57581dd2-96b8-4402-912b-c669c16f21a2";
 const threadId = "thread_x5b1mR0LJOVFxD8PWlKbVWWK";
 const crypto = require("crypto");
 const fs = require("fs");
+const { structureMessageList } = require("../utils/ArrayMethods");
+const { createNewFileURL } = require("../utils/FileTransform");
 
 require("dotenv").config();
+
+const getThreads = async (req, res) => {
+  try {
+    const threads = await knex("threads").where(
+      "user_id",
+      "=",
+      req.params.userId
+    );
+    res.send(threads);
+  } catch (error) {
+    console.error(error);
+    res.status(400).send(error.message);
+  }
+};
 
 const createAssistant = async (req, res) => {
   try {
@@ -72,7 +88,7 @@ const runStatus = async (req, res) => {
   try {
     const runStatus = await openai.beta.threads.runs.retrieve(
       req.params.threadId,
-      "run_IzLyhc6go7v8IG3ScAJAgMTq"
+      req.params.runId
     );
     res.send(runStatus);
   } catch (error) {
@@ -86,12 +102,34 @@ const getResponse = async (req, res) => {
     const messageList = await openai.beta.threads.messages.list(
       req.params.threadId
     );
-    res.send(messageList.body.data);
+    const responseArray = structureMessageList(messageList);
+    const imageArray = responseArray.filter(
+      (response) => response.type === "image_file"
+    );
+
+    const fileObject = await createNewFileURL(imageArray[0].file_id);
+    const fileObject2 = await openai.files.retrieve(imageArray[0].file_id);
+    console.log(fileObject);
+    console.log(fileObject.url);
+    res.send(responseArray);
   } catch (error) {
     console.error(error);
     res.status(400).send(error.message);
   }
 };
+
+const createFileLink = async (req, res) => {
+  try {
+    console.log("starting");
+    console.log(req.body.file_id);
+    const fileBlob = await openai.files.content(req.body.file_id);
+    res.send(fileBlob);
+  } catch (error) {
+    console.error(error);
+    res.status(400).send(error.message);
+  }
+};
+
 module.exports = {
   createThread,
   addMessage,
@@ -99,4 +137,6 @@ module.exports = {
   runStatus,
   getResponse,
   createAssistant,
+  getThreads,
+  createFileLink,
 };
