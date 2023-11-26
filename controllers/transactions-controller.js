@@ -255,7 +255,18 @@ const fetchMonthlyTransactions = async (req, res) => {
       .where("transactions.created", ">", "2023-10-31")
       .andWhere("transactions.user_id", "=", req.params.userId);
 
-    res.send(monthlyTransactions);
+    const monthlyTransactionsStructured = monthlyTransactions.map(
+      (transactions) => {
+        return {
+          amount: transactions.amount / 100,
+          category: transactions.category,
+          date: transactions.created,
+          user_id: transactions.user_id,
+          currency: "GBP",
+        };
+      }
+    );
+    res.send(monthlyTransactionsStructured);
   } catch (error) {
     console.log(error);
     res.status(400).send(error.message);
@@ -273,13 +284,16 @@ const fetchYearlyTransactions = async (req, res) => {
       )
       .where("transactions.created", ">", "2022-12-31")
       .andWhere("transactions.user_id", "=", req.params.userId);
-    const yearlyTransactionsMapped = yearlyTransactions.map((transaction) => {
+    const yearlyTransactionsMapped = yearlyTransactions.map((transactions) => {
       return {
-        ...transaction,
-        month: dayjs(transaction.created).format("MMMM"),
-        week: dayjs(transaction.created).week(),
+        amount: transactions.amount / 100,
+        category: transactions.category,
+        date: transactions.created,
+        user_id: transactions.user_id,
+        currency: "GBP",
       };
     });
+
     res.send(yearlyTransactionsMapped);
   } catch (error) {
     console.log(error);
@@ -299,7 +313,19 @@ const fetchWeeklyTransactions = async (req, res) => {
       .where("transactions.created", ">", "2023-11-12")
       .andWhere("transactions.user_id", "=", req.params.userId);
 
-    res.send(weeklyTransactions);
+    const weeklyTransactionsStructured = weeklyTransactions.map(
+      (transactions) => {
+        return {
+          amount: transactions.amount / 100,
+          category: transactions.category,
+          date: transactions.created,
+          user_id: transactions.user_id,
+          currency: "GBP",
+        };
+      }
+    );
+
+    res.send(weeklyTransactionsStructured);
   } catch (error) {
     console.log(error);
     res.status(400).send(error.message);

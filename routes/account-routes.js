@@ -20,7 +20,18 @@ router.route("/connections/:userId").get(async (req, res) => {
   const connectionsBalancesObj = await fetchConnectionBalances(
     req.params.userId
   );
-  res.send(connectionsBalancesObj);
+  const connectionsBalancesObjStructured = connectionsBalancesObj.map(
+    (balance) => {
+      return {
+        account_balance: balance.account_balance / 100,
+        savings_balance: balance.savings_balance / 100,
+        available_balance: balance.available_balance / 100,
+        user_known_as: balance.user_known_as,
+        connect_known_as: balance.connect_known_as,
+      };
+    }
+  );
+  res.send(connectionsBalancesObjStructured);
 });
 
 // A Users Balance
