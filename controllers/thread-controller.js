@@ -80,6 +80,7 @@ const addMessage = async (req, res) => {
 
 const runThread = async (req, res) => {
   try {
+    req.params.threadId;
     const runResponse = await openai.beta.threads.runs.create(
       req.params.threadId,
       req.body
