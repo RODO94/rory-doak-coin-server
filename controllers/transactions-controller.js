@@ -26,6 +26,201 @@ const fetchWeeklySpend = async (req, res) => {
   }
 };
 
+const fetchCategorisedSpend = async (req, res) => {
+  // Each part of the radar is a category
+  // We need category then all the values for that category per month
+  // index by month
+  // {groceries, eating_out,transport, entertainment, shopping}
+  try {
+    const usersWeeklySpend = await knex("transactions")
+      .join("users", "transactions.user_id", "=", "users.id")
+      .select(
+        "transactions.amount",
+        "transactions.user_id",
+        "transactions.account_id",
+        "transactions.category",
+        "transactions.created",
+        "users.first_name",
+        "users.last_name",
+        "users.known_as"
+      )
+      .whereBetween("transactions.created", ["2023-01-01", "2023-11-19"]);
+    let janObj = {
+      month: "january",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let febObj = {
+      month: "february",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let marObj = {
+      month: "march",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let aprObj = {
+      month: "april",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let mayObj = {
+      month: "may",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let junObj = {
+      month: "june",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let julObj = {
+      month: "july",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let augObj = {
+      month: "august",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let sepObj = {
+      month: "september",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let octObj = {
+      month: "october",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let novObj = {
+      month: "november",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    let decObj = {
+      month: "december",
+      groceries: 0,
+      eating_out: 0,
+      transport: 0,
+      entertainment: 0,
+      shopping: 0,
+    };
+    const januaryArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 0
+    );
+    const februaryArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 1
+    );
+    const marchArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 2
+    );
+    const aprilArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 3
+    );
+    const mayArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 4
+    );
+    const juneArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 5
+    );
+    const julyArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 6
+    );
+    const augustArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 7
+    );
+    const septemberArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 8
+    );
+    const octoberArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 9
+    );
+    const novemberArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 10
+    );
+    const decemberArray = usersWeeklySpend.filter(
+      (transaction) => dayjs(transaction.created).get("month") === 11
+    );
+
+    const categorisedJanuaryArray = januaryArray.map((transaction) => {
+      if (transaction.category === "groceries") {
+        return (janObj = {
+          ...janObj,
+          groceries: janObj.groceries + transaction.amount,
+        });
+      }
+      if (transaction.category === "eating_out") {
+        return (janObj = {
+          ...janObj,
+          eating_out: janObj.eating_out + transaction.amount,
+        });
+      }
+      if (transaction.category === "entertaiment") {
+        return (janObj = {
+          ...janObj,
+          entertainment: janObj.entertainment + transaction.amount,
+        });
+      }
+      if (transaction.category === "transport") {
+        return (janObj = {
+          ...janObj,
+          transport: janObj.transport + transaction.amount,
+        });
+      }
+      if (transaction.category === "shopping") {
+        return (janObj = {
+          ...janObj,
+          shopping: janObj.shopping + transaction.amount,
+        });
+      }
+    });
+
+    console.log(januaryArray);
+    res.send(categorisedJanuaryArray);
+    // Filter by month
+    // Group by category for each month
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error.message);
+  }
+};
+
 const fetchTransactions = async (req, res) => {
   try {
     const usersTransactions = await knex("transactions")
@@ -117,4 +312,5 @@ module.exports = {
   fetchMonthlyTransactions,
   fetchYearlyTransactions,
   fetchWeeklyTransactions,
+  fetchCategorisedSpend,
 };

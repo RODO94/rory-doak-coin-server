@@ -8,6 +8,9 @@ dayjs.extend(weekOfYear);
 const router = express.Router();
 require("dotenv").config();
 router.route("/weekly").get(transactionController.fetchWeeklySpend);
+router
+  .route("/weekly/category")
+  .get(transactionController.fetchCategorisedSpend);
 router.route("/").get(transactionController.fetchTransactions);
 router
   .route("/:userId/weekly")

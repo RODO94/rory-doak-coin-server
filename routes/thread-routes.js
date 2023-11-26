@@ -21,6 +21,7 @@ router
 // Run thread
 router.route("/:threadId/run").post(threadController.runThread);
 
+router.route("/:threadId/steps/:runId").get(threadController.runSteps);
 router.route("/:threadId/:runId").get(threadController.runStatus);
 // Retrieve all threads for a user
 router.route("/:userId").get(threadController.getThreads);

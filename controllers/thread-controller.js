@@ -48,15 +48,21 @@ const createAssistant = async (req, res) => {
 };
 
 const createThread = async (req, res) => {
-  const thread = await openai.beta.threads.create();
-  await knex("threads").insert([
-    {
-      id: crypto.randomUUID(),
-      thread_id: thread.id,
-      user_id: userId,
-    },
-  ]);
-  res.send(thread.id);
+  try {
+    const thread = await openai.beta.threads.create();
+    await knex("threads").insert([
+      {
+        id: crypto.randomUUID(),
+        thread_id: thread.id,
+        user_id: userId,
+        thread_name: req.body.thread_name,
+      },
+    ]);
+    res.send(thread.id);
+  } catch (error) {
+    console.error(error);
+    res.status(400).send(error.message);
+  }
 };
 
 const addMessage = async (req, res) => {
@@ -109,9 +115,6 @@ const getResponse = async (req, res) => {
       (response) => response.type === "image_file"
     );
 
-    // const fileObject = await createNewFileURL(imageArray[0].file_id);
-    // const fileObject2 = await openai.files.retrieve(imageArray[0].file_id);
-
     res.send(responseArray);
   } catch (error) {
     console.error(error);
@@ -134,6 +137,24 @@ const createFileLink = async (req, res) => {
   }
 };
 
+const runSteps = async (req, res) => {
+  try {
+    const steps = await openai.beta.threads.runs.steps.list(
+      req.params.threadId,
+      req.params.runId
+    );
+    const message = await openai.beta.threads.messages.retrieve(
+      req.params.threadId,
+      "msg_5KPtHibBdJKaIQM3gRV3uUwK"
+    );
+    // message.content
+    res.send(steps.body);
+  } catch (error) {
+    console.error(error);
+    res.status(400).send(error.message);
+  }
+};
+
 module.exports = {
   createThread,
   addMessage,
@@ -143,4 +164,5 @@ module.exports = {
   createAssistant,
   getThreads,
   createFileLink,
+  runSteps,
 };
