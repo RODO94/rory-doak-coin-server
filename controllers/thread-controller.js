@@ -45,17 +45,18 @@ const getTransactions = async () => {
 
 const createAssistant = async (req, res) => {
   try {
-    const yearlyTransactionFile = await openai.files.create({
+    const threeYearTransactionFile = await openai.files.create({
       file: fs.createReadStream("./data/three-year-transactions.json"),
       purpose: "assistants",
     });
     const assistant = await openai.beta.assistants.create({
-      name: "Rory's Assistant V01",
+      name: "Rory's Assistant V03",
+      description: null,
       instructions:
         "You are a helpful assistant for Rory and will help Rory improve their financial habits and keep track of how they are spending their money. Please refer to him as Rory in your responses. You will be clear, concise, and use data visualisations where applicable to convey your advice. The file uploaded is a JSON file of transactions for the last three years with the amount, currency, date, user_id, and category provided. This will provide you with data on the users transaction information for the year.",
       model: "gpt-4-1106-preview",
       tools: [{ type: "code_interpreter" }, { type: "retrieval" }],
-      file_ids: [yearlyTransactionFile.id],
+      file_ids: [threeYearTransactionFile.id],
     });
 
     res.send(assistant);
