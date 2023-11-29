@@ -8,6 +8,7 @@ const fs = require("fs");
 const { structureMessageList } = require("../utils/ArrayMethods");
 const { createNewFileURL } = require("../utils/FileTransform");
 const { default: axios } = require("axios");
+const transactionController = require("../controllers/transactions-controller");
 
 require("dotenv").config();
 
@@ -25,6 +26,23 @@ const getThreads = async (req, res) => {
   }
 };
 
+const getTransactions = async () => {
+  const usersTransactions = await knex("transactions")
+    .join("users", "transactions.user_id", "=", "users.id")
+    .select(
+      "transactions.amount",
+      "transactions.user_id",
+      "users.first_name",
+      "users.known_as",
+      "transactions.account_id",
+      "transactions.category",
+      "transactions.created"
+    )
+    .where("transactions.user_id", "57581dd2-96b8-4402-912b-c669c16f21a2");
+
+  return usersTransactions;
+};
+
 const createAssistant = async (req, res) => {
   try {
     const yearlyTransactionFile = await openai.files.create({
@@ -36,7 +54,21 @@ const createAssistant = async (req, res) => {
       description:
         "You are a helpful assistant for Rory and will help Rory improve their financial habits and keep track of how they are spending their money. Please refer to him as Rory in your responses. You will be clear, concise, and use data visualisations where applicable to convey your advice. The files added are in JSON format and can help you answer questions from the user. The file yearly-transactions.json will provide you with data on the users transaction information for the year.",
       model: "gpt-4-1106-preview",
-      tools: [{ type: "code_interpreter" }, { type: "retrieval" }],
+      tools: [
+        { type: "code_interpreter" },
+        { type: "retrieval" },
+        {
+          type: "function",
+          function: {
+            name: "getTransactions",
+            description: "Get the transaction data for the user",
+            parameters: {
+              type: "object",
+              properties: {},
+            },
+          },
+        },
+      ],
       file_ids: [yearlyTransactionFile.id],
     });
 
@@ -98,7 +130,6 @@ const runStatus = async (req, res) => {
       req.params.threadId,
       req.params.runId
     );
-    console.log(runStatus.status);
     res.send(runStatus);
   } catch (error) {
     console.error(error);
@@ -148,8 +179,21 @@ const runSteps = async (req, res) => {
       req.params.threadId,
       "msg_5KPtHibBdJKaIQM3gRV3uUwK"
     );
-    // message.content
-    res.send(steps.body);
+    const stepPromiseArray = steps.body.data.map(async (step) => {
+      if (step.step_details.type === "message_creation") {
+        return await openai.beta.threads.messages.retrieve(
+          req.params.threadId,
+          step.step_details.message_creation.message_id
+        );
+      }
+      if (step.step_details.type === "tool_calls") {
+        let stepMessage = step.step_details.tool_calls;
+        return stepMessage;
+      }
+      return { content: "not matching" };
+    });
+    const newArray = await Promise.all(stepPromiseArray);
+    res.send(newArray);
   } catch (error) {
     console.error(error);
     res.status(400).send(error.message);

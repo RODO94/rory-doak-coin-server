@@ -210,8 +210,6 @@ const fetchCategorisedSpend = async (req, res) => {
         });
       }
     });
-
-    console.log(januaryArray);
     res.send(categorisedJanuaryArray);
     // Filter by month
     // Group by category for each month

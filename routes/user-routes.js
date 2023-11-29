@@ -13,17 +13,21 @@ router.route("/connections").get(async (req, res) => {
   res.send(connectionsObj);
 });
 
-router.route("/connections/:userId").get(async (req, res) => {
-  const connectionsObj = await fetchUsersConnections(req.params.userId);
-  if (!connectionsObj) {
-    res
-      .status(404)
-      .send(
-        "Connections for that user cannot be found, please check the user ID"
-      );
-  }
-  res.send(connectionsObj);
-});
+router
+  .route("/connections/:userId")
+  .get(async (req, res) => {
+    const connectionsObj = await fetchUsersConnections(req.params.userId);
+    if (!connectionsObj) {
+      res
+        .status(404)
+        .send(
+          "Connections for that user cannot be found, please check the user ID"
+        );
+    }
+    res.send(connectionsObj);
+  })
+  .post(async (req, res) => {})
+  .delete(async (req, res) => {});
 
 router.route("/:userId").get(async (req, res) => {
   if (!req.params.userId) {
