@@ -280,7 +280,7 @@ const fetchYearlyTransactions = async (req, res) => {
         "transactions.created",
         "transactions.user_id"
       )
-      .where("transactions.created", ">", "2022-12-31")
+      .where("transactions.created", ">", "2020-12-31")
       .andWhere("transactions.user_id", "=", req.params.userId);
     const yearlyTransactionsMapped = yearlyTransactions.map((transactions) => {
       return {
