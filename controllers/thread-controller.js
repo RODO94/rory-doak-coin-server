@@ -104,7 +104,45 @@ const runThread = async (req, res) => {
       req.params.threadId,
       req.body
     );
-    res.send(runResponse);
+    let runStatus = await openai.beta.threads.runs.retrieve(
+      req.params.threadId,
+      runResponse.id
+    );
+    let steps = await openai.beta.threads.runs.steps.list(
+      req.params.threadId,
+      runResponse.id
+    );
+
+    while (runStatus.status !== "completed" || steps.data.length === 0) {
+      steps = await openai.beta.threads.runs.steps.list(
+        req.params.threadId,
+        runResponse.id
+      );
+      if (steps.data.length !== 0) {
+        console.log(steps.data[0].step_details);
+      }
+      // console.log(runResponse.id);
+      // console.log(runStatus.status);
+      runStatus = await openai.beta.threads.runs.retrieve(
+        req.params.threadId,
+        runResponse.id
+      );
+      console.log(runStatus.status);
+    }
+    console.log(runStatus.status);
+    if (runStatus.status !== "completed") {
+      console.log(steps.data);
+      console.log(
+        `run thread finished with status in progress ${runStatus.status}`
+      );
+      return res.send({
+        id: runResponse.id,
+        status: runStatus.status,
+        step: steps.data[0].step_details,
+      });
+    } else {
+      return res.send(runResponse);
+    }
   } catch (error) {
     console.error(error);
     res.status(400).send(error.message);
@@ -113,11 +151,32 @@ const runThread = async (req, res) => {
 
 const runStatus = async (req, res) => {
   try {
-    const runStatus = await openai.beta.threads.runs.retrieve(
+    let runStatus = await openai.beta.threads.runs.retrieve(
       req.params.threadId,
       req.params.runId
     );
-    res.send(runStatus);
+    while (runStatus.status !== "completed") {
+      let steps = await openai.beta.threads.runs.steps.list(
+        req.params.threadId,
+        req.params.runId
+      );
+      if (steps.data.length !== 0) {
+        console.log(steps.data[0].step_details);
+        return;
+      }
+      runStatus = await openai.beta.threads.runs.retrieve(
+        req.params.threadId,
+        req.params.runId
+      );
+    }
+    if (runStatus.status === "completed") {
+      return res.send(runStatus);
+    } else {
+      return res.send({
+        status: runStatus.status,
+        step: steps.data,
+      });
+    }
   } catch (error) {
     console.error(error);
     res.status(400).send(error.message);
