@@ -59,7 +59,6 @@ const weekArrayRestructure = (array) => {
   const roryUnitChange = newArray[0].data.map((week) => {
     return (newObj = { ...week, y: week.y / 100 });
   });
-  console.log(roryUnitChange);
   newArray[0].data = roryUnitChange;
   const sortedArray = newArray.map((person) => {
     return person.data.sort((a, b) => {
